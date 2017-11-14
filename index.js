@@ -11,9 +11,10 @@ function findMatching(drivers, name){
 };
 
 function fuzzyMatch(drivers, name){
-  for (const driver){
-    if (name()){
-      return(drivers)
+  return drivers.filter(function(driver){
+    if (name.charAt(0) === driver.charAt(0)){
+      return true
     }
-  }
+    else return false
+  })
 };

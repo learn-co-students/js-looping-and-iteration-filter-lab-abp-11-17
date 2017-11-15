@@ -33,14 +33,11 @@ return firstLetters;
 }
 
 function matchName(drivers, name) {
-let matchy = drivers.filter(function(driver){
-    if(name === driver.name){
-      return true
-    } else {
-      return false
-    }
+  return drivers.filter(function(driver){
+    return name === driver.name
 
 
-})
-return matchy;
+
+  })
+  
 }

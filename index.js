@@ -2,7 +2,7 @@
 //F1
 function findMatching(drivers, name){
 let matchingDrivers = drivers.filter(function(driver){
-  if(name.toLowerCase() === driver.toLowerCase()){
+  if(driver.toLowerCase() === name.toLowerCase()) {
     return true
   }
   else {
@@ -23,9 +23,10 @@ let matchingInitials = drivers.filter(function(driver){
   }
 })
 return matchingInitials
-};
+}
 //F3
 function matchName(list, name){
   return list.filter(function(driver){
-    return driver.name.toLowerCase() === name.toLowerCase();});
+    return driver.name.toLowerCase() === name.toLowerCase()
+  })
 }

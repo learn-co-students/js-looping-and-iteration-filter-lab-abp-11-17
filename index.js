@@ -1,40 +1,23 @@
 // Code your solution in this file
+ function findMatching(drivers, string) {
+   const matchingDrivers = drivers.filter(function(driver) {
+     return driver.toLowerCase() === string.toLowerCase()
+   })
+     return matchingDrivers
+   }
 
 
+  function fuzzyMatch(drivers, string) {
+    const stringLength = string.length
+    const sortaMatch = drivers.filter(function(driver) {
+      return driver.slice(0, stringLength) === string
+   })
+   return sortaMatch
+  }
 
-function findMatching (arrayOfDrivers, name) {
-    let matchingDrivers = arrayOfDrivers.filter(function(driverName) {
-      if (name.toLowerCase() === driverName.toLowerCase()){
-        return true;
-      } else {
-         return false;
-        }
+  function matchName(drivers, string) {
+    const nameMatch = drivers.filter(function(driver) {
+      return driver['name'] === string
     })
-    return matchingDrivers;
-}
-
-
-function fuzzyMatch(drivers, letters) {
-  let nameLength = letters.length;
-
-  let fuzzyDrivers = drivers.filter(function(driverName) {
-    if (letters === driverName.slice(0, nameLength)) {
-        return true;
-    } else {
-        return false;
-    }
-  })
-  return fuzzyDrivers;
-}
-
-
-function matchName(drivers, name) {
-  let nameMatch = drivers.filter (function (driver){
-      if (driver.name.toLowerCase() === name.toLowerCase()) {
-        return true;
-      } else {
-        return false;
-      }
-    });
-    return nameMatch;
-}
+    return nameMatch
+  }
